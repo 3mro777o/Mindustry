@@ -1,0 +1,63 @@
+[
+ {
+  "id": 0,
+  "key": "sector.biomassFacility.description",
+  "sev": "medium",
+  "flags": [],
+  "en": "The origin of spores. This is the facility in which they were researched and initially produced.\\nResearch the technology contained within. Cultivate spores for the production of fuel and plastics.\\n\\n[lightgray]Upon this facility's demise, the spores were released. Nothing in the local ecosystem could compete with such an invasive organism.",
+  "cur": "منشأ الأبواغ. هذه هي المنشأة التي جرى فيها بحثها وإنتاجها أول مرة.\\nابحث التقنية الموجودة فيها. استزرع الأبواغ لإنتاج الوقود والبلاستيك.\\n\\n[lightgray]عند انهيار هذه المنشأة، تحررت الأبواغ. لم يستطع أي شيء في النظام البيئي المحلي منافسة كائن غاز كهذا.",
+  "sug": "منشأ الأبواغ. هذه هي المنشأة التي جرى فيها بحثها وإنتاجها أول مرة.\\nابحث التقنية الموجودة فيها. استزرع الأبواغ لإنتاج الوقود والبلاستيك.\\n\\n[lightgray]عند انهيار هذه المنشأة، تحررت الأبواغ. لم يستطع أي شيء في النظام البيئي المحلي منافسة كائن مجتاح كهذا.",
+  "problem": "Without tanween, 'كائن غاز' reads as 'gas organism' instead of 'invasive organism' ('غازٍ'); use an unambiguous term for 'invasive' in unvocalized Arabic.",
+  "decision": "accepted"
+ },
+ {
+  "id": 1,
+  "key": "unabletoclog",
+  "sev": "medium",
+  "flags": [],
+  "en": "Unable to clog",
+  "cur": "تعذر السد",
+  "sug": "غير قابل للانسداد",
+  "problem": "Wrong meaning: 'Unable to clog' describes a block that cannot get jammed/clogged, whereas 'تعذر السد' means 'failed to block/dam'.",
+  "decision": "accepted"
+ },
+ {
+  "id": 2,
+  "key": "stat.legsplashdamage",
+  "sev": "low",
+  "flags": [
+   "TOUCHED_IN_PASS1"
+  ],
+  "en": "Leg Splash Damage",
+  "cur": "ضرر منطقة الأرجل",
+  "sug": "ضرر الأرجل النطاقي",
+  "problem": "Ambiguous idafa construction: 'ضرر منطقة الأرجل' reads as 'damage to the leg area' rather than 'splash/area damage dealt by legs'.",
+  "decision": "accepted"
+ },
+ {
+  "id": 3,
+  "key": "rules.logicunitbuild",
+  "sev": "medium",
+  "flags": [
+   "TOUCHED_IN_PASS1"
+  ],
+  "en": "Logic Unit Building",
+  "cur": "البناء عبر وحدات المنطق",
+  "sug": "البناء بالوحدات عبر المنطق",
+  "problem": "Mistranslates 'Logic Unit Building' as 'building via logic units' instead of units building via logic (inconsistent with rules.logicunitcontrol right above it).",
+  "decision": "accepted"
+ },
+ {
+  "id": 4,
+  "key": "rules.logicunitdeconstruct",
+  "sev": "medium",
+  "flags": [
+   "TOUCHED_IN_PASS1"
+  ],
+  "en": "Logic Unit Deconstruction",
+  "cur": "التفكيك عبر وحدات المنطق",
+  "sug": "التفكيك بالوحدات عبر المنطق",
+  "problem": "Mistranslates 'Logic Unit Deconstruction' as 'deconstruction via logic units' instead of units deconstructing via logic (inconsistent with rules.logicunitcontrol).",
+  "decision": "accepted"
+ }
+]

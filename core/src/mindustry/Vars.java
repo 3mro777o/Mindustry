@@ -550,8 +550,12 @@ public class Vars implements Loadable{
                 locale = lastLocale;
             }
 
-            Locale.setDefault(locale);
-            Core.bundle = I18NBundle.createBundle(handle, locale);
+            boolean rtl = locale.getLanguage().equals("ar");
+            //Arabic UI: mirror table layouts, and keep Western digits (0-9) in number formatting
+            arc.scene.ui.layout.Table.rtl = rtl;
+            Locale formatLocale = rtl ? new Locale.Builder().setLocale(locale).setUnicodeLocaleKeyword("nu", "latn").build() : locale;
+            Locale.setDefault(formatLocale);
+            Core.bundle = I18NBundle.createBundle(handle, formatLocale);
 
             //router
             if(locale.toString().equals("router")){

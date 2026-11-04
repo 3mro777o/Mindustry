@@ -49,6 +49,7 @@ public class LanguageDialog extends BaseDialog{
     "zh_TW", "正體中文",
     "ja", "日本語",
     "ko", "한국어",
+    "ar", "العربية",
     "router", "router"
     );
 

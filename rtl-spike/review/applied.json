@@ -1,0 +1,835 @@
+[
+ {
+  "key": "mods.restore",
+  "severity": "high",
+  "before": "فشلت الاستعادة",
+  "after": "استعادة التعديلات الفاشلة",
+  "problem": "Mistranslated UI button: 'Restore Failed' is an action button to re-enable mods disabled after a startup crash, not an error message ('Restoration failed')."
+ },
+ {
+  "key": "commandmode.nounits",
+  "severity": "high",
+  "before": "[no units]",
+  "after": "[لا توجد وحدات]",
+  "problem": "Untranslated UI string (literal bracketed text, not a color tag)."
+ },
+ {
+  "key": "receiving.assets",
+  "severity": "medium",
+  "before": "[accent]جار استقبال الموارد ({0})...",
+  "after": "[accent]جار استقبال الأصول ({0})...",
+  "problem": "Translates technical 'assets' as 'الموارد' (the glossary term for in-game Resources) instead of 'الأصول' used elsewhere."
+ },
+ {
+  "key": "receiving.assets.fail",
+  "severity": "medium",
+  "before": "حدث خطأ إدخال/إخراج أثناء استقبال الموارد.",
+  "after": "حدث خطأ إدخال/إخراج أثناء استقبال الأصول.",
+  "problem": "Translates technical 'assets' as 'الموارد' (the glossary term for in-game Resources) instead of 'الأصول' used elsewhere."
+ },
+ {
+  "key": "player.admin",
+  "severity": "medium",
+  "before": "تبديل المشرف",
+  "after": "تبديل صفة المشرف",
+  "problem": "Wrong meaning: 'تبديل المشرف' means swapping/replacing the admin rather than toggling a player's admin status."
+ },
+ {
+  "key": "overwrite",
+  "severity": "medium",
+  "before": "كتابة فوق",
+  "after": "استبدال",
+  "problem": "Ungrammatical standalone UI button ending with a dangling preposition ('فوق') without an object."
+ },
+ {
+  "key": "campaign.rework.serpulo",
+  "severity": "medium",
+  "before": "[accent]⚠ تمت إعادة تصميم حملة سيربولو.[]\\n\\nتغيرت مواقع القطاعات والصعوبة. قد تواجه مشكلات متعلقة بحفظات الحملة المتبقية من التخطيط القديم.\\n\\nلتجربة أنظف، فكر في إعادة تعيين حفظات الحملة من الإعدادات.",
+  "after": "[accent]⚠ تمت إعادة تصميم حملة سيربولو.[]\\n\\nتغيرت مواقع القطاعات والصعوبة. قد تواجه مشكلات متعلقة بملفات حفظ الحملة المتبقية من التخطيط القديم.\\n\\nلتجربة أنظف، فكر في إعادة تعيين ملفات حفظ الحملة من الإعدادات.",
+  "problem": "Uses non-existent/ungrammatical Arabic plural 'حفظات' for 'saves'."
+ },
+ {
+  "key": "save.none",
+  "severity": "medium",
+  "before": "لم يتم العثور على حفظات!",
+  "after": "لم يتم العثور على ملفات حفظ!",
+  "problem": "Uses non-existent/ungrammatical Arabic plural 'حفظات' for 'saves'."
+ },
+ {
+  "key": "save.assets.missing.info",
+  "severity": "medium",
+  "before": "[scarlet]⚠ يحتوي هذا الحفظ على أصول مفقودة![]\\n\\n[lightgray]على الأرجح لأن ملف الحفظ لم يصدر بشكل صحيح.\\n[lightgray]عند مشاركة الحفظات، صدرها عبر واجهة اللعبة فقط. لا تنسخ ملفات الحفظ مباشرة.\\n[lightgray]إذا كان نقل الملفات ضروريا، فتأكد من نسخ مجلد [accent]assetCache[] أيضا.",
+  "after": "[scarlet]⚠ يحتوي هذا الحفظ على أصول مفقودة![]\\n\\n[lightgray]على الأرجح لأن ملف الحفظ لم يصدر بشكل صحيح.\\n[lightgray]عند مشاركة ملفات الحفظ، قم بتصديرها عبر واجهة اللعبة فقط. لا تنسخ ملفات الحفظ مباشرة.\\n[lightgray]إذا كان نقل الملفات ضروريا، فتأكد من نسخ مجلد [accent]assetCache[] أيضا.",
+  "problem": "Uses non-existent/ungrammatical Arabic plural 'الحفظات' for 'saves'."
+ },
+ {
+  "key": "wave.enemies",
+  "severity": "medium",
+  "before": "[lightgray]متبق {0} من الأعداء",
+  "after": "[lightgray]تبقى {0} من الأعداء",
+  "problem": "Ungrammatical clause-initial bare indefinite participle 'متبق' (and appears truncated without tanwin)."
+ },
+ {
+  "key": "wave.enemy",
+  "severity": "medium",
+  "before": "[lightgray]متبق {0} من الأعداء",
+  "after": "[lightgray]تبقى {0} من الأعداء",
+  "problem": "Ungrammatical clause-initial bare indefinite participle 'متبق' (and appears truncated without tanwin)."
+ },
+ {
+  "key": "database.patched",
+  "severity": "low",
+  "before": "معدل بواسطة تصحيحات البيانات.",
+  "after": "معدل بواسطة رقع البيانات.",
+  "problem": "Inconsistent term for the 'data patches' feature ('تصحيحات البيانات' instead of 'رقع البيانات' used in editor/asset strings)."
+ },
+ {
+  "key": "steam.error",
+  "severity": "low",
+  "before": "فشل تهيئة خدمات Steam.\\nالخطأ: {0}",
+  "after": "فشلت تهيئة خدمات Steam.\\nالخطأ: {0}",
+  "problem": "Gender agreement error: feminine subject 'تهيئة' takes 'فشلت' rather than 'فشل'."
+ },
+ {
+  "key": "editor.worldprocessors.none",
+  "severity": "low",
+  "before": "[lightgray]لم يعثر على أي معالج عالم!\\nأضف واحدا في محرر الخرائط، أو استخدم زر \\ue813 الإضافة أدناه.",
+  "after": "[lightgray]لم يعثر على أي معالج عالم!\\nأضف واحدا في محرر الخرائط، أو استخدم زر الإضافة \\ue813 أدناه.",
+  "problem": "Icon \\ue813 is placed inside the idafa construct ('زر \\ue813 الإضافة'), splitting mudaf and mudaf ilayh."
+ },
+ {
+  "key": "ping",
+  "severity": "medium",
+  "before": "التأخر: {0}ms",
+  "after": "زمن الاستجابة: {0}ms",
+  "problem": "\"التأخر\" means tardiness/being late rather than network latency/ping."
+ },
+ {
+  "key": "abandon",
+  "severity": "low",
+  "before": "تخل",
+  "after": "التخلي",
+  "problem": "Without harakat, \"تخل\" is ambiguous on a short UI button and inconsistent with verbal-noun button labels."
+ },
+ {
+  "key": "objective.command",
+  "severity": "low",
+  "before": "[accent]قد الوحدات",
+  "after": "[accent]وجه الوحدات",
+  "problem": "Without harakat, \"قد\" reads as the particle \"قد\" (may/already) rather than the imperative \"قُد\" (command/lead)."
+ },
+ {
+  "key": "sector.abandon",
+  "severity": "low",
+  "before": "تخل",
+  "after": "التخلي",
+  "problem": "Without harakat, \"تخل\" is ambiguous on a short UI button and inconsistent with verbal-noun button labels."
+ },
+ {
+  "key": "sector.shielded",
+  "severity": "medium",
+  "before": "[lightgray] محمي بدرع",
+  "after": "[lightgray] محمي بدرع واق",
+  "problem": "Glossary defines Armor as \"الدرع\" and Shield as \"الدرع الواقي\"; \"محمي بدرع\" means armored rather than shielded."
+ },
+ {
+  "key": "difficulty.casual",
+  "severity": "high",
+  "before": "عادي جدا",
+  "after": "سهل جدا",
+  "problem": "Mistranslates the \"Casual\" difficulty tier (easier than \"Easy\" / \"سهل\") as \"عادي جدا\" (\"Very Normal\"), breaking the difficulty scale."
+ },
+ {
+  "key": "sector.impact0078.name",
+  "severity": "medium",
+  "before": "إمباكت 0078",
+  "after": "الاصطدام 0078",
+  "problem": "Transliterates \"Impact\" instead of translating the sector name's meaning naturally as required by the glossary."
+ },
+ {
+  "key": "sector.crateredBattleground.name",
+  "severity": "medium",
+  "before": "ساحة المعركة الفوهية",
+  "after": "ساحة المعركة ذات الفوهات",
+  "problem": "\"الفوهية\" means oral/nozzle-related rather than cratered (full of craters, \"الفوهات\" in the glossary)."
+ },
+ {
+  "key": "sector.crateredBattleground.description",
+  "severity": "high",
+  "before": "تجمعت المياه في هذه الفوهة، أثر من الحروب القديمة. استعد المنطقة. اجمع الرمل. اصهر الزجاج المعدني. اضخ الماء لتبريد الأبراج والمثاقب.",
+  "after": "تجمعت المياه في هذه الفوهة، أثر من الحروب القديمة. استعد المنطقة. اجمع الرمل. اصهر الزجاج المعدني. ضخ الماء لتبريد الأبراج والمثاقب.",
+  "problem": "Grammatical error: the imperative of \"ضخ\" is \"ضخ\", not \"اضخ\"."
+ },
+ {
+  "key": "sector.atlas.description",
+  "severity": "medium",
+  "before": "يحتوي هذا القطاع على تضاريس متنوعة وسيتطلب مجموعة متنوعة من الوحدات للهجوم بفعالية.\\nقد تحتاج أيضا إلى وحدات مطورة لتجاوز بعض قواعد العدو المرصودة هنا.\\nابحث [accent]محلل كهربائي[] و[accent]معيد تصنيع الدبابات[].",
+  "after": "يحتوي هذا القطاع على تضاريس متنوعة وسيتطلب مجموعة متنوعة من الوحدات للهجوم بفعالية.\\nقد تحتاج أيضا إلى وحدات مطورة لتجاوز بعض قواعد العدو المرصودة هنا.\\nابحث [accent]المحلل الكهربائي[] و[accent]معيد تصنيع الدبابات[].",
+  "problem": "Ungrammatical indefinite direct object without accusative alifs (\"محلل كهربائي\") for definite \"the Electrolyzer\", inconsistent with \"معيد تصنيع الدبابات\"."
+ },
+ {
+  "key": "status.shielded.name",
+  "severity": "medium",
+  "before": "محمي بدرع",
+  "after": "محمي بدرع واق",
+  "problem": "Glossary defines Armor as \"الدرع\" and Shield as \"الدرع الواقي\"; \"محمي بدرع\" means armored rather than shielded."
+ },
+ {
+  "key": "settings.clearall.confirm",
+  "severity": "high",
+  "before": "[scarlet]تحذير![]\\nسيؤدي هذا إلى مسح جميع البيانات، بما فيها الحفظات والخرائط والمفتوحات وتخصيصات المفاتيح.\\nبمجرد الضغط على 'موافق' ستمسح اللعبة كل البيانات وتخرج تلقائيا.",
+  "after": "[scarlet]تحذير![]\\nسيؤدي هذا إلى مسح جميع البيانات، بما فيها ملفات الحفظ والخرائط والعناصر المفتوحة وتخصيصات المفاتيح.\\nبمجرد الضغط على 'موافق' ستمسح اللعبة كل البيانات وتخرج تلقائيا.",
+  "problem": "\"الحفظات\" and \"المفتوحات\" are invalid/unnatural Arabic plurals for game saves and unlocks."
+ },
+ {
+  "key": "settings.clearsaves.confirm",
+  "severity": "medium",
+  "before": "هل أنت متأكد من مسح جميع حفظاتك؟",
+  "after": "هل أنت متأكد من مسح جميع ملفات حفظك؟",
+  "problem": "\"حفظاتك\" uses the non-existent plural \"حفظات\" for game saves instead of \"ملفات حفظك\"."
+ },
+ {
+  "key": "settings.clearsaves",
+  "severity": "medium",
+  "before": "مسح الحفظات",
+  "after": "مسح ملفات الحفظ",
+  "problem": "\"الحفظات\" is not a valid Arabic plural for game saves; use \"ملفات الحفظ\"."
+ },
+ {
+  "key": "settings.clearcampaignsaves",
+  "severity": "medium",
+  "before": "مسح حفظات الحملة",
+  "after": "مسح ملفات حفظ الحملة",
+  "problem": "\"حفظات\" is not a valid Arabic plural for game saves; use \"ملفات حفظ\"."
+ },
+ {
+  "key": "settings.clearcampaignsaves.confirm",
+  "severity": "medium",
+  "before": "هل أنت متأكد من مسح جميع حفظات الحملة؟",
+  "after": "هل أنت متأكد من مسح جميع ملفات حفظ الحملة؟",
+  "problem": "\"حفظات\" is not a valid Arabic plural for game saves; use \"ملفات حفظ\"."
+ },
+ {
+  "key": "settings.clearplanetcampaignsaves",
+  "severity": "medium",
+  "before": "مسح حفظات حملة الكوكب",
+  "after": "مسح ملفات حفظ حملة الكوكب",
+  "problem": "\"حفظات\" is not a valid Arabic plural for game saves; use \"ملفات حفظ\"."
+ },
+ {
+  "key": "settings.clearplanetcampaignsaves.confirm",
+  "severity": "medium",
+  "before": "هل أنت متأكد من مسح حفظات حملة {0}؟",
+  "after": "هل أنت متأكد من مسح ملفات حفظ حملة {0}؟",
+  "problem": "\"حفظات\" is not a valid Arabic plural for game saves; use \"ملفات حفظ\"."
+ },
+ {
+  "key": "block.limit",
+  "severity": "medium",
+  "before": "[scarlet]الحد: {0} مباني",
+  "after": "[scarlet]الحد: {0} مبان",
+  "problem": "Grammatical error and glossary mismatch: indefinite \"مباني\" must drop its final ي (\"مبان\")."
+ },
+ {
+  "key": "stat.legsplashdamage",
+  "severity": "high",
+  "before": "ضرر رشق الأرجل",
+  "after": "ضرر منطقة الأرجل",
+  "problem": "Mistranslates the game term \"splash damage\" (area damage) literally as liquid splashing/pelting (\"رشق\")."
+ },
+ {
+  "key": "stat.itemsmoved.info",
+  "severity": "medium",
+  "before": "غالبا ما يكون الإنتاج غير خطي ومرتبطا بـ FPS/TPS.",
+  "after": "غالبا ما يكون معدل النقل غير خطي ومرتبطا بـ FPS/TPS.",
+  "problem": "Mistranslates conveyor \"Throughput\" as \"الإنتاج\" (production) instead of transfer rate."
+ },
+ {
+  "key": "stat.drilltier",
+  "severity": "medium",
+  "before": "قابل للحفر",
+  "after": "ما يمكن حفره",
+  "problem": "Singular adjective \"قابل للحفر\" reads as if the drill itself is drillable rather than naming what it can drill (\"Drillables\")."
+ },
+ {
+  "key": "ability.forcefield.description",
+  "severity": "medium",
+  "before": "ينشئ درعا قويا يمتص الرصاص",
+  "after": "ينشئ درع طاقة واقيا يمتص الرصاص",
+  "problem": "Mistranslates \"force shield\" as \"درعا قويا\" (\"strong armor\"), confusing \"force\" with \"strong\" and omitting the glossary term \"الدرع الواقي\"."
+ },
+ {
+  "key": "ability.shieldarc.description",
+  "severity": "medium",
+  "before": "ينشئ درعا قويا على شكل قوس يمتص أو يصد الرصاص والصواريخ والوحدات",
+  "after": "ينشئ درع طاقة واقيا على شكل قوس يمتص أو يصد الرصاص والصواريخ والوحدات",
+  "problem": "Mistranslates \"force shield\" as \"درعا قويا\" (\"strong armor\"), confusing \"force\" with \"strong\" and omitting the glossary term \"الدرع الواقي\"."
+ },
+ {
+  "key": "ability.stat.shield",
+  "severity": "medium",
+  "before": "[stat]{0}[lightgray] أقصى درع واقي",
+  "after": "[stat]{0}[lightgray] أقصى درع واق",
+  "problem": "Grammatical error: indefinite genitive defective adjective \"واقي\" must drop its final ي (\"واق\")."
+ },
+ {
+  "key": "unit.perleg",
+  "severity": "medium",
+  "before": "لكل رجل",
+  "after": "لكل ساق",
+  "problem": "Without tashkeel, 'لكل رجل' reads as 'per man' rather than 'per leg'."
+ },
+ {
+  "key": "setting.buildautopause.name",
+  "severity": "medium",
+  "before": "إيقاف البناء التلقائي",
+  "after": "إيقاف البناء مؤقتا تلقائيا",
+  "problem": "Ambiguous syntax and missing 'pause': 'إيقاف البناء التلقائي' reads as 'Stop Auto-Building' rather than automatically pausing building."
+ },
+ {
+  "key": "setting.macnotch.name",
+  "severity": "medium",
+  "before": "تكييف الواجهة مع حاجز الشاشة",
+  "after": "تكييف الواجهة مع نتوء الشاشة",
+  "problem": "Mistranslated hardware term: 'حاجز الشاشة' means 'screen barrier' instead of 'display notch' ('نتوء الشاشة')."
+ },
+ {
+  "key": "setting.macnotch.description",
+  "severity": "medium",
+  "before": "على أجهزة MacOS ذات الحاجز، يخفض الواجهة لتجنبه.\\nيلزم إعادة التشغيل لتطبيق التغييرات.",
+  "after": "على أجهزة MacOS ذات النتوء، يخفض الواجهة لتجنبه.\\nيلزم إعادة التشغيل لتطبيق التغييرات.",
+  "problem": "Mistranslated hardware term: 'الحاجز' means 'barrier' instead of 'notch' ('النتوء')."
+ },
+ {
+  "key": "steam.friendsonly.tooltip",
+  "severity": "low",
+  "before": "هل يمكن لأصدقاء Steam فقط الانضمام إلى لعبتك.\\nإلغاء تحديد هذا المربع سيجعل لعبتك عامة ويمكن لأي شخص الانضمام.",
+  "after": "تحديد ما إذا كان بإمكان أصدقاء Steam فقط الانضمام إلى لعبتك.\\nإلغاء تحديد هذا المربع سيجعل لعبتك عامة ويمكن لأي شخص الانضمام.",
+  "problem": "Ungrammatical calque of indirect 'Whether...': uses direct question particle 'هل' in a declarative statement ending with a period."
+ },
+ {
+  "key": "keybind.move_x.name",
+  "severity": "medium",
+  "before": "تحريك X",
+  "after": "التحرك أفقيا",
+  "problem": "Wrong transitivity ('تحريك X' = move object X) and inconsistent with 'keybind.move_y.name' ('التحرك عموديا')."
+ },
+ {
+  "key": "keybind.command_mode.name",
+  "severity": "low",
+  "before": "وضع القيادة",
+  "after": "وضع الأوامر",
+  "problem": "Inconsistent UI term: translated as 'وضع القيادة' here, whereas 'setting.commandmodehold' (which refers to this keybind) uses 'وضع الأوامر'."
+ },
+ {
+  "key": "keybind.block_select_up.name",
+  "severity": "low",
+  "before": "تحديد المبنى أعلى",
+  "after": "تحديد المبنى للأعلى",
+  "problem": "Ungrammatical directional adverb: bare 'أعلى' after a definite noun requires a preposition ('للأعلى')."
+ },
+ {
+  "key": "keybind.block_select_down.name",
+  "severity": "low",
+  "before": "تحديد المبنى أسفل",
+  "after": "تحديد المبنى للأسفل",
+  "problem": "Ungrammatical directional adverb: bare 'أسفل' after a definite noun requires a preposition ('للأسفل')."
+ },
+ {
+  "key": "keybind.diagonal_placement.name",
+  "severity": "medium",
+  "before": "الوضع القطري",
+  "after": "البناء القطري",
+  "problem": "Mistranslation: 'الوضع القطري' means 'Diagonal Mode' (confusing 'placement' with 'mode'), inconsistent with 'البناء القطري' in 'setting.swapdiagonal'."
+ },
+ {
+  "key": "mode.sandbox.name",
+  "severity": "medium",
+  "before": "وضع الحرية",
+  "after": "وضع الحرية (Sandbox)",
+  "problem": "Deviates from the glossary, which specifies 'وضع الحرية (Sandbox)' for Sandbox."
+ },
+ {
+  "key": "rules.logicunitbuild",
+  "severity": "high",
+  "before": "بناء الوحدات بالمنطق",
+  "after": "البناء عبر وحدات المنطق",
+  "problem": "Wrong meaning: 'بناء الوحدات بالمنطق' means constructing units with logic, whereas this rule allows logic-controlled units to build blocks."
+ },
+ {
+  "key": "rules.logicunitdeconstruct",
+  "severity": "high",
+  "before": "تفكيك الوحدات بالمنطق",
+  "after": "التفكيك عبر وحدات المنطق",
+  "problem": "Wrong meaning: 'تفكيك الوحدات بالمنطق' means dismantling units with logic, whereas this rule allows logic-controlled units to deconstruct blocks."
+ },
+ {
+  "key": "block.parallax.name",
+  "severity": "low",
+  "before": "باراليكس",
+  "after": "بارالاكس",
+  "problem": "Inaccurate transliteration of turret name 'Parallax' ('باراليكس' instead of 'بارالاكس')."
+ },
+ {
+  "key": "block.phase-wall-large.name",
+  "severity": "medium",
+  "before": "جدار الطور كبير",
+  "after": "جدار الطور الكبير",
+  "problem": "Ungrammatical Arabic: 'جدار الطور' is definite by idafa, so indefinite 'كبير' forms a sentence ('The phase wall is large') instead of a noun phrase."
+ },
+ {
+  "key": "block.coal-centrifuge.name",
+  "severity": "high",
+  "before": "مثقلة الفحم",
+  "after": "طارد الفحم المركزي",
+  "problem": "Wrong word: 'مثقلة' means weight/paperweight, not centrifuge ('طارد مركزي')."
+ },
+ {
+  "key": "block.surge-wall-large.name",
+  "severity": "medium",
+  "before": "جدار الاندفاع كبير",
+  "after": "جدار الاندفاع الكبير",
+  "problem": "Ungrammatical definiteness mismatch: definite noun phrase 'جدار الاندفاع' followed by indefinite adjective 'كبير' reads as a full sentence ('The surge wall is large')."
+ },
+ {
+  "key": "block.force-projector.name",
+  "severity": "medium",
+  "before": "جهاز المجال القوي",
+  "after": "جهاز مجال القوة",
+  "problem": "Mistranslates 'Force' (as in force field) as the adjective 'القوي' ('the strong field') instead of 'مجال القوة'."
+ },
+ {
+  "key": "block.launch-pad.name",
+  "severity": "low",
+  "before": "منصة إطلاق [lightgray](قديم)",
+  "after": "منصة إطلاق [lightgray](قديمة)",
+  "problem": "Gender agreement error: 'منصة' is feminine, so 'قديم' should be 'قديمة'."
+ },
+ {
+  "key": "ff.graphitepress",
+  "severity": "medium",
+  "before": ":tree: ابحث وضع :graphite-press: [accent]مكبس غرافيت[].",
+  "after": ":tree: ابحث عن :graphite-press: [accent]مكبس الغرافيت[] ثم ضعه.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'ابحث وَضْع' ('search the status/placement of') instead of 'research and place', and 'ابحث' lacks 'عن'."
+ },
+ {
+  "key": "ff.generator",
+  "severity": "medium",
+  "before": "يمكن أيضا استخدام :coal: الفحم كوقود في :combustion-generator: [accent]مولدات الاحتراق[].\\nابحث وضع :combustion-generator: [accent]مولد احتراق[].",
+  "after": "يمكن أيضا استخدام :coal: الفحم كوقود في :combustion-generator: [accent]مولدات الاحتراق[].\\nابحث عن :combustion-generator: [accent]مولد الاحتراق[] ثم ضعه.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'search the status/placement of' instead of 'research and place'."
+ },
+ {
+  "key": "ff.node",
+  "severity": "medium",
+  "before": ":power-node: [accent]عقد الطاقة[] تنقل الطاقة إلى المباني القريبة ضمن المدى.\\nابحث وضع :power-node: [accent]عقدة طاقة[] قرب المولد.",
+  "after": ":power-node: [accent]عقد الطاقة[] تنقل الطاقة إلى المباني القريبة ضمن المدى.\\nابحث عن :power-node: [accent]عقدة الطاقة[] ثم ضعها قرب المولد.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'search the status/placement of' instead of 'research and place'."
+ },
+ {
+  "key": "ff.battery",
+  "severity": "medium",
+  "before": ":battery: [accent]البطاريات[] تخزن الطاقة.\\nابحث وضع :battery: [accent]بطارية[] قرب العقدة.",
+  "after": ":battery: [accent]البطاريات[] تخزن الطاقة.\\nابحث عن :battery: [accent]البطارية[] ثم ضعها قرب العقدة.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'search the status/placement of' instead of 'research and place'."
+ },
+ {
+  "key": "ff.arc",
+  "severity": "medium",
+  "before": "أبراج :arc: [accent]آرك[] تحتاج إلى طاقة لتعمل. ابحث وضع برج :arc: [accent]آرك[] قرب عقدة طاقة.",
+  "after": "أبراج :arc: [accent]آرك[] تحتاج إلى طاقة لتعمل. ابحث عن برج :arc: [accent]آرك[] ثم ضعه قرب عقدة طاقة.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'search the status/placement of' instead of 'research and place'."
+ },
+ {
+  "key": "fungalpass.tutorial1",
+  "severity": "medium",
+  "before": "استخدم [accent]الوحدات[] للدفاع عن المباني ومهاجمة العدو.\\nابحث وضع :ground-factory: [accent]مصنع وحدات برية[].",
+  "after": "استخدم [accent]الوحدات[] للدفاع عن المباني ومهاجمة العدو.\\nابحث عن :ground-factory: [accent]المصنع البري[] ثم ضعه.",
+  "problem": "Mismatched block name ('مصنع وحدات برية' instead of 'مصنع بري' from block.ground-factory.name) and ambiguous 'ابحث وضع' without harakat."
+ },
+ {
+  "key": "frontier.tutorial2",
+  "severity": "medium",
+  "before": "موجات العدو ترسل [accent]بلا نهاية[] حتى [unlaunched]تدمير جميع نوى العدو.",
+  "after": "تتوالى موجات العدو [accent]بلا نهاية[] حتى تصبح جميع نوى العدو [unlaunched]مدمرة.",
+  "problem": "Word reordering placed the entire phrase 'تدمير جميع نوى العدو.' inside the unclosed '[unlaunched]' color tag instead of only 'destroyed', and unvocalized 'موجات العدو ترسل' reads as active transitive."
+ },
+ {
+  "key": "atolls.destroy1",
+  "severity": "low",
+  "before": "دمر أولا [accent]نواتي الأساس[] الـ 2 التابعتين للعدو.\\n[accent]احصل على الثوريوم[].",
+  "after": "دمر أولا [accent]نواتي الأساس[] التابعتين للعدو.\\n[accent]احصل على الثوريوم[].",
+  "problem": "Ungrammatical and redundant 'الـ 2' attached to an already dual construct noun ('نواتي الأساس')."
+ },
+ {
+  "key": "atolls.mega1",
+  "severity": "low",
+  "before": "ادخل [accent]وضع القيادة[] وحدد وحدات :mega:[accent]ميغا[].",
+  "after": "ادخل [accent]وضع الأوامر[] وحدد وحدات :mega:[accent]ميغا[].",
+  "problem": "Inconsistent UI term: 'command mode' is translated as 'وضع الأوامر' everywhere else in the game, not 'وضع القيادة'."
+ },
+ {
+  "key": "atolls.carry2",
+  "severity": "high",
+  "before": "1: أمر وحدات ميغا [accent]بالتحرك فوق[] الوحدات البرية.",
+  "after": "1: وجه وحدات ميغا [accent]للتحرك فوق[] الوحدات البرية.",
+  "problem": "Ungrammatical verb form: 'أمر' is past tense ('he commanded') or a noun, not an imperative."
+ },
+ {
+  "key": "onset.bore",
+  "severity": "high",
+  "before": "ابحث وضع :plasma-bore: [accent]ثاقب البلازما[].\\nيعدن الموارد من الجدران تلقائيا.",
+  "after": "ابحث عن :plasma-bore: [accent]حفار البلازما[] ثم ضعه.\\nيعدن الموارد من الجدران تلقائيا.",
+  "problem": "Mismatched block name ('ثاقب البلازما' instead of 'حفار البلازما' from block.plasma-bore.name) and ambiguous 'ابحث وضع' without harakat."
+ },
+ {
+  "key": "onset.power",
+  "severity": "high",
+  "before": "لتزويد ثاقب البلازما بـ[accent]الطاقة[]، ابحث وضع :beam-node: [accent]عقدة الشعاع[].\\nصل مكثف التوربين بثاقب البلازما.",
+  "after": "لتزويد حفار البلازما بـ[accent]الطاقة[]، ابحث عن :beam-node: [accent]عقدة الشعاع[] ثم ضعها.\\nصل مكثف التوربين بحفار البلازما.",
+  "problem": "Mismatched block name ('ثاقب البلازما' instead of 'حفار البلازما') and ambiguous 'ابحث وضع' without harakat."
+ },
+ {
+  "key": "onset.ducts",
+  "severity": "high",
+  "before": "ابحث وضع :duct: [accent]القنوات[] لنقل الموارد المعدنة من ثاقب البلازما إلى النواة.\\nانقر واسحب لوضع عدة قنوات.\\n[accent]مرر العجلة[] للتدوير.",
+  "after": "ابحث عن :duct: [accent]المجاري[] ثم ضعها لنقل الموارد المستخرجة من حفار البلازما إلى النواة.\\nانقر واسحب لوضع أكثر من مجرى.\\n[accent]مرر العجلة[] للتدوير.",
+  "problem": "Mismatched block names ('القنوات' instead of 'مجرى/المجاري' from block.duct.name, and 'ثاقب البلازما' instead of 'حفار البلازما') plus ambiguous 'ابحث وضع'."
+ },
+ {
+  "key": "onset.ducts.mobile",
+  "severity": "high",
+  "before": "ابحث وضع :duct: [accent]القنوات[] لنقل الموارد المعدنة من ثاقب البلازما إلى النواة.\\n\\nاضغط بإصبعك لثانية ثم اسحب لوضع عدة قنوات.",
+  "after": "ابحث عن :duct: [accent]المجاري[] ثم ضعها لنقل الموارد المستخرجة من حفار البلازما إلى النواة.\\n\\nاضغط بإصبعك لثانية ثم اسحب لوضع أكثر من مجرى.",
+  "problem": "Mismatched block names ('القنوات' instead of 'مجرى/المجاري' and 'ثاقب البلازما' instead of 'حفار البلازما') plus ambiguous 'ابحث وضع'."
+ },
+ {
+  "key": "onset.moremine",
+  "severity": "high",
+  "before": "وسع عملية التعدين.\\nضع المزيد من ثواقب البلازما واستخدم عقد الشعاع والقنوات لدعمها.\\nعدن 200 بيريليوم.",
+  "after": "وسع عملية التعدين.\\nضع المزيد من حفارات البلازما واستخدم عقد الشعاع والمجاري لدعمها.\\nاستخرج 200 بيريليوم.",
+  "problem": "Mismatched block names ('ثواقب البلازما' instead of 'حفارات البلازما', 'القنوات' instead of 'المجاري'), and unvocalized imperative 'عدن' looks like the proper noun 'Aden'."
+ },
+ {
+  "key": "onset.graphite",
+  "severity": "medium",
+  "before": "المباني الأكثر تعقيدا تحتاج إلى :graphite: [accent]الغرافيت[].\\nجهز ثواقب البلازما لتعدين الغرافيت.",
+  "after": "المباني الأكثر تعقيدا تحتاج إلى :graphite: [accent]الغرافيت[].\\nجهز حفارات البلازما لتعدين الغرافيت.",
+  "problem": "Mismatched block name: 'ثواقب البلازما' does not match 'حفار البلازما' (block.plasma-bore.name)."
+ },
+ {
+  "key": "onset.research2",
+  "severity": "high",
+  "before": "ابدأ بحث [accent]المصانع[].\\nابحث :cliff-crusher: [accent]كاسر المنحدرات[] و:silicon-arc-furnace: [accent]فرن القوس السيليكوني[].",
+  "after": "ابدأ بحث [accent]المصانع[].\\nابحث عن :cliff-crusher: [accent]كسارة الجروف[] و:silicon-arc-furnace: [accent]فرن القوس السيليكوني[].",
+  "problem": "Mismatched block name: 'كاسر المنحدرات' does not match 'كسارة الجروف' (block.cliff-crusher.name)."
+ },
+ {
+  "key": "onset.crusher",
+  "severity": "high",
+  "before": "استخدم :cliff-crusher: [accent]كاسرات المنحدرات[] لتعدين الرمل.",
+  "after": "استخدم :cliff-crusher: [accent]كسارات الجروف[] لتعدين الرمل.",
+  "problem": "Mismatched block name: 'كاسرات المنحدرات' does not match 'كسارة الجروف' (block.cliff-crusher.name)."
+ },
+ {
+  "key": "onset.fabricator",
+  "severity": "medium",
+  "before": "استخدم [accent]الوحدات[] لاستكشاف الخريطة والدفاع عن المباني ومهاجمة العدو. ابحث وضع :tank-fabricator: [accent]مصنع الدبابات[].",
+  "after": "استخدم [accent]الوحدات[] لاستكشاف الخريطة والدفاع عن المباني ومهاجمة العدو. ابحث عن :tank-fabricator: [accent]مصنع الدبابات[] ثم ضعه.",
+  "problem": "Without harakat, 'ابحث وضع' reads as 'search the status/placement of' instead of 'research and place'."
+ },
+ {
+  "key": "onset.turretammo",
+  "severity": "medium",
+  "before": "زود البرج بـ[accent]البيريليوم[] كذخيرة باستخدام القنوات.",
+  "after": "زود البرج بـ[accent]البيريليوم[] كذخيرة باستخدام المجاري.",
+  "problem": "Mismatched block name: 'ducts' is translated as 'القنوات' instead of 'المجاري' (matching block.duct.name 'مجرى')."
+ },
+ {
+  "key": "aegis.tungsten",
+  "severity": "medium",
+  "before": "يمكن تعدين التنغستن باستخدام [accent]مثقاب الصدم[].\\nيتطلب هذا المبنى [accent]الماء[] و[accent]الطاقة[].",
+  "after": "يمكن تعدين التنغستن باستخدام [accent]مثقاب الاصطدام[].\\nيتطلب هذا المبنى [accent]الماء[] و[accent]الطاقة[].",
+  "problem": "Mismatched block name: 'مثقاب الصدم' does not match 'مثقاب الاصطدام' (block.impact-drill.name)."
+ },
+ {
+  "key": "split.pickup",
+  "severity": "high",
+  "before": "يمكن للوحدة الأساسية التقاط بعض المباني.\\nحلق فوق هذه [accent]الحاوية[]، والتقطها وضعها على [accent]محمل الحمولة[].\\n(المفاتيح الافتراضية هي [accent][[[] و[accent]][] للالتقاط والإسقاط)",
+  "after": "يمكن لوحدة النواة التقاط بعض المباني.\\nحلق فوق هذه [accent]الحاوية[]، والتقطها وضعها على [accent]محمل الحمولة[].\\n(المفاتيح الافتراضية هي [accent][[[] و[accent]][] للالتقاط والإسقاط)",
+  "problem": "Mistranslated game and glossary term: 'core unit' (the player's unit from the Core, 'وحدة النواة') is translated as 'الوحدة الأساسية' ('the basic unit')."
+ },
+ {
+  "key": "split.pickup.mobile",
+  "severity": "high",
+  "before": "يمكن للوحدة الأساسية التقاط بعض المباني.\\nحلق فوق هذه [accent]الحاوية[]، والتقطها وضعها على [accent]محمل الحمولة[].\\n(للالتقاط أو الإسقاط، اضغط مطولا على الهدف.)",
+  "after": "يمكن لوحدة النواة التقاط بعض المباني.\\nحلق فوق هذه [accent]الحاوية[]، والتقطها وضعها على [accent]محمل الحمولة[].\\n(للالتقاط أو الإسقاط، اضغط مطولا على الهدف.)",
+  "problem": "Mistranslated game and glossary term: 'core unit' ('وحدة النواة') is translated as 'الوحدة الأساسية' ('the basic unit')."
+ },
+ {
+  "key": "split.build",
+  "severity": "high",
+  "before": "يجب نقل الوحدات إلى الجانب الآخر من الجدار.\\nابحث :payload-mass-driver: [accent]مسرع الحمولة الكتلي[].\\nضع [accent]مسرعي حمولة كتليين[]، واحدا على كل جانب من الجدار.\\nأنشئ الرابط بالضغط على أحدهما ثم اختيار الآخر.",
+  "after": "يجب نقل الوحدات إلى الجانب الآخر من الجدار.\\nابحث عن :payload-mass-driver: [accent]مقذاف الحمولة[].\\nضع [accent]مقذافي حمولة[]، واحدا على كل جانب من الجدار.\\nأنشئ الرابط بالضغط على أحدهما ثم اختيار الآخر.",
+  "problem": "Mismatched block name: 'Payload Mass Driver' is translated as 'مسرع الحمولة الكتلي' instead of 'مقذاف الحمولة' (block.payload-mass-driver.name)."
+ },
+ {
+  "key": "split.container",
+  "severity": "high",
+  "before": "كما في الحاوية، يمكن أيضا نقل الوحدات باستخدام [accent]مسرع الحمولة الكتلي[].\\nضع مصنع وحدات بجوار المسرع الكتلي لتحميلها،\\nثم أرسلها عبر الجدار لمهاجمة قاعدة العدو.",
+  "after": "مثل الحاوية، يمكن أيضا نقل الوحدات باستخدام [accent]مقذاف الحمولة[].\\nضع مصنع وحدات بجوار مقذاف الكتلة لتحميلها،\\nثم أرسلها عبر الجدار لمهاجمة قاعدة العدو.",
+  "problem": "Mismatched block names: 'Payload Mass Driver' and 'mass driver' are translated as 'مسرع الحمولة الكتلي' and 'المسرع الكتلي' instead of 'مقذاف الحمولة' and 'مقذاف الكتلة'."
+ },
+ {
+  "key": "item.lead.details",
+  "severity": "high",
+  "before": "كثيف. خامل. يستخدم على نطاق واسع في البطاريات.\\nملاحظة: سام على الأرجح لأشكال الحياة البيولوجية؛ لا أن هناك الكثير منها متبقيا هنا.",
+  "after": "كثيف. خامل. يستخدم على نطاق واسع في البطاريات.\\nملاحظة: سام على الأرجح لأشكال الحياة البيولوجية؛ وإن لم يبق الكثير منها هنا.",
+  "problem": "Ungrammatical literal calque: 'لا أن هناك الكثير منها متبقيا هنا' is a broken word-for-word rendering of 'not that there are many left here'."
+ },
+ {
+  "key": "item.scrap.description",
+  "severity": "high",
+  "before": "يستخدم في المذيبات والمساحيق لتكريره إلى مواد أخرى.",
+  "after": "يستخدم في المصاهر والساحقات لتكريره إلى مواد أخرى.",
+  "problem": "Mistranslation: 'Pulverizers' (crushers) is translated as 'المساحيق' ('powders'), and 'Melters' (melting furnaces) as 'المذيبات' ('chemical solvents')."
+ },
+ {
+  "key": "item.plastanium.description",
+  "severity": "low",
+  "before": "يستخدم في الوحدات المتقدمة والعزل والذخيرة التشظوية.",
+  "after": "يستخدم في الوحدات المتقدمة والعزل والذخيرة المتشظية.",
+  "problem": "Malformed Arabic adjective 'التشظوية' for fragmentation ammunition; standard MSA term is 'المتشظية'."
+ },
+ {
+  "key": "liquid.neoplasm.details",
+  "severity": "low",
+  "before": "نيوبلازم. كتلة لا يمكن السيطرة عليها من خلايا اصطناعية سريعة الانقسام بقوام يشبه الوحل. مقاوم للحرارة. شديد الخطورة على أي منشآت تستخدم الماء.\\n\\nمعقد وغير مستقر جدا للتحليل القياسي. تطبيقاته المحتملة مجهولة. يوصى بحرقه في برك الخبث.",
+  "after": "نيوبلازم. كتلة لا يمكن السيطرة عليها من خلايا اصطناعية سريعة الانقسام بقوام يشبه الوحل. مقاوم للحرارة. شديد الخطورة على أي منشآت تستخدم الماء.\\n\\nشديد التعقيد وعدم الاستقرار بحيث يتعذر تحليله قياسيا. تطبيقاته المحتملة مجهولة. يوصى بحرقه في برك الخبث.",
+  "problem": "Unnatural calque of 'Too ... for ...': 'معقد وغير مستقر جدا للتحليل القياسي' reads as 'very unstable for the purpose of standard analysis'."
+ },
+ {
+  "key": "block.mender.description",
+  "severity": "high",
+  "before": "يصلح المباني القريبة منه كل فترة.\\nيمكنه استخدام السيليكون (Silicon) لزيادة المدى والكفاءة بنسبة 12%.",
+  "after": "يصلح المباني القريبة منه كل فترة.\\nيستخدم السيليكون اختياريا لزيادة المدى والكفاءة.",
+  "problem": "Contains untranslated '(Silicon)' violating the glossary and a fabricated 'بنسبة 12%' not present in the English source."
+ },
+ {
+  "key": "block.phase-conveyor.description",
+  "severity": "low",
+  "before": "ينقل العناصر فوريا فوق التضاريس أو المباني. مداه أطول من الجسر الناقل، لكنه يحتاج إلى الطاقة.",
+  "after": "ينقل العناصر فورا فوق التضاريس أو المباني. مداه أطول من الجسر الناقل، لكنه يحتاج إلى الطاقة.",
+  "problem": "Ungrammatical adverb 'فوريا' instead of MSA 'فورا'."
+ },
+ {
+  "key": "block.router.description",
+  "severity": "low",
+  "before": "يوزع العناصر الداخلة على الاتجاهات الأربعة (4) بالتساوي.",
+  "after": "يوزع العناصر الداخلة على اتجاهات الإخراج الأربعة بالتساوي.",
+  "problem": "Omits 'output' (اتجاهات الإخراج) and unnaturally duplicates the number as 'الأربعة (4)'."
+ },
+ {
+  "key": "block.mechanical-drill.description",
+  "severity": "high",
+  "before": "عند وضعه على خام، يستخرج العناصر ببطء وبلا توقف. يستطيع تعدين الموارد الأساسية فقط، مثل Copper و Lead.",
+  "after": "عند وضعه على خام، يستخرج العناصر ببطء وبلا توقف. يستطيع تعدين الموارد الأساسية فقط.",
+  "problem": "Adds ', مثل Copper و Lead' which is not in the English source and leaves glossary item names in English."
+ },
+ {
+  "key": "block.logic-display.description",
+  "severity": "high",
+  "before": "يعرض رسومات عشوائية من معالج منطقي.",
+  "after": "يعرض أي رسومات من معالج منطقي.",
+  "problem": "Mistranslates 'arbitrary graphics' (any/custom graphics) as 'رسومات عشوائية' (random graphics)."
+ },
+ {
+  "key": "block.large-logic-display.description",
+  "severity": "high",
+  "before": "يعرض رسومات عشوائية من معالج منطقي.",
+  "after": "يعرض أي رسومات من معالج منطقي.",
+  "problem": "Mistranslates 'arbitrary graphics' (any/custom graphics) as 'رسومات عشوائية' (random graphics)."
+ },
+ {
+  "key": "block.tile-logic-display.description",
+  "severity": "high",
+  "before": "يعرض رسومات عشوائية من معالج منطقي.\\nيتصل بسلاسة بالشاشات المبلطة المجاورة.",
+  "after": "يعرض أي رسومات من معالج منطقي.\\nيتصل بسلاسة بالشاشات المبلطة المجاورة.",
+  "problem": "Mistranslates 'arbitrary graphics' (any/custom graphics) as 'رسومات عشوائية' (random graphics)."
+ },
+ {
+  "key": "block.repair-turret.description",
+  "severity": "low",
+  "before": "يصلح باستمرار أقرب وحدة متضررة في محيطه. يقبل سائل تبريد اختياريا.",
+  "after": "يصلح باستمرار أقرب وحدة متضررة في محيطه. يقبل مبردا اختياريا.",
+  "problem": "Translates generic 'coolant' as 'سائل تبريد', risking confusion with the glossary term for Cryofluid ('سائل التبريد') instead of 'مبرد' used elsewhere."
+ },
+ {
+  "key": "block.target-dummy.description",
+  "severity": "low",
+  "before": "ينشئ دمية تدريب لاختبار الضرر في الثانية. يمكن ضبط الدرع والطيران.\\nفي وضع الحرية فقط.",
+  "after": "ينشئ دمية تدريب لاختبار الضرر في الثانية. يمكن ضبط الدرع والطيران.\\nفي وضع الحرية (Sandbox) فقط.",
+  "problem": "Does not use the exact glossary term 'وضع الحرية (Sandbox)' for 'Sandbox'."
+ },
+ {
+  "key": "block.core-bastion.description",
+  "severity": "low",
+  "before": "نواة القاعدة. مدرعة. إذا دمرت، يخسر القطاع.",
+  "after": "نواة القاعدة. مدرعة. إذا دمرت، تخسر القطاع.",
+  "problem": "Without harakat, 'يخسر القطاع' reads as active ('the sector loses') and is awkward passive Arabic; inconsistent with core-shard ('تخسر القطاع')."
+ },
+ {
+  "key": "unit.quasar.description",
+  "severity": "medium",
+  "before": "يطلق أشعة ليزر خارقة تلحق الضرر بأهداف العدو وتصلح المنشآت الحليفة. قادر على الطيران. محمي بدرع.",
+  "after": "يطلق أشعة ليزر خارقة تلحق الضرر بأهداف العدو وتصلح المنشآت الحليفة. قادر على الطيران. محمي بدرع واق.",
+  "problem": "Translates 'Shielded' using 'درع' (glossary term for Armor) instead of 'درع واق' (glossary term for Shield)."
+ },
+ {
+  "key": "lst.flushmessage",
+  "severity": "low",
+  "before": "يعرض رسالة على الشاشة من مخزن النص.\\nإذا كان متغير نتيجة النجاح هو [accent]@wait[]،\\nفسينتظر حتى تنتهي الرسالة السابقة.\\nوإلا، فيخرج ما إذا نجح عرض الرسالة.",
+  "after": "يعرض رسالة على الشاشة من مخزن النص.\\nإذا كان متغير نتيجة النجاح هو [accent]@wait[]،\\nفسينتظر حتى تنتهي الرسالة السابقة.\\nوإلا، فإنه يخرج ما إذا كان عرض الرسالة قد نجح.",
+  "problem": "Ungrammatical final clause: attaches resultative 'فـ' directly to bare present verb 'فيخرج' and omits 'كان' after 'ما إذا'."
+ },
+ {
+  "key": "lst.getflag",
+  "severity": "medium",
+  "before": "يتحقق مما إذا كانت علامة عامة معينة.",
+  "after": "يتحقق مما إذا تم تعيين علامة عامة.",
+  "problem": "Ambiguous syntax: indefinite 'علامة عامة معينة' reads as 'a specific global flag' rather than 'whether a global flag is set'."
+ },
+ {
+  "key": "lst.playsound",
+  "severity": "medium",
+  "before": "يشغل صوتا.\\nيمكن أن يكون مستوى الصوت والاتجاه قيمة عامة، أو يحسبان بناء على الموقع.",
+  "after": "يشغل صوتا.\\nيمكن أن يكون كل من مستوى الصوت والتوزيع الصوتي قيمة عامة، أو أن يحسب بناء على الموقع.",
+  "problem": "Mistranslates stereo audio 'pan' as 'الاتجاه' (direction) and has broken verb mood/agreement in 'أن يكون ... أو يحسبان'."
+ },
+ {
+  "key": "lglobal.sectionNetwork",
+  "severity": "medium",
+  "before": "الشبكة/جهة العميل [World Processor Only]",
+  "after": "الشبكة/جهة العميل [معالج العالم فقط]",
+  "problem": "Untranslated English UI note '[World Processor Only]'; 'Processor' should use glossary term 'المعالج'."
+ },
+ {
+  "key": "lenum.type",
+  "severity": "low",
+  "before": "نوع المبنى/الوحدة.\\nمثلا لأي موزع، ستعيد [accent]@router[].\\nليست سلسلة نصية.",
+  "after": "نوع المبنى/الوحدة.\\nمثلا لأي موزع، سيعيد [accent]@router[].\\nليس سلسلة نصية.",
+  "problem": "Gender agreement error: feminine 'ستعيد' and 'ليست' refer to masculine 'نوع' / returned value."
+ },
+ {
+  "key": "laccess.shooting",
+  "severity": "low",
+  "before": "ما إذا كانت الوحدة أو البرج يطلق النار حاليا.",
+  "after": "ما إذا كانت الوحدة أو البرج في حالة إطلاق نار حاليا.",
+  "problem": "Ungrammatical gender mismatch between feminine 'كانت' and masculine predicate verb 'يطلق'."
+ },
+ {
+  "key": "laccess.bulletlifetime",
+  "severity": "low",
+  "before": "العمر الكلي للمقذوف، بالتكات.",
+  "after": "العمر الكلي للمقذوف، بالنبضات.",
+  "problem": "Colloquial transliteration 'بالتكات' for 'ticks', inconsistent with 'بالنبضات' defined in lglobal.@tick and lglobal.@ipt."
+ },
+ {
+  "key": "laccess.bullettime",
+  "severity": "low",
+  "before": "المدة التي مضت على وجود المقذوف، بالتكات.",
+  "after": "المدة التي مضت على وجود المقذوف، بالنبضات.",
+  "problem": "Colloquial transliteration 'بالتكات' for 'ticks', inconsistent with 'بالنبضات' defined in lglobal.@tick and lglobal.@ipt."
+ },
+ {
+  "key": "lenum.emod",
+  "severity": "medium",
+  "before": "باقي القسمة الحقيقي، تأخذ إشارة الناتج من المقسوم عليه.",
+  "after": "باقي القسمة الحقيقي، تؤخذ إشارة الناتج من المقسوم عليه.",
+  "problem": "Spelling/grammar error: active 'تأخذ' (missing object) written instead of passive 'تؤخذ' ('is taken')."
+ },
+ {
+  "key": "lenum.min",
+  "severity": "medium",
+  "before": "أصغر رقمين.",
+  "after": "الأصغر بين رقمين.",
+  "problem": "Wrong meaning/grammar: 'أصغر رقمين' means 'the two smallest numbers' rather than 'the smaller of two numbers'."
+ },
+ {
+  "key": "lenum.max",
+  "severity": "medium",
+  "before": "أكبر رقمين.",
+  "after": "الأكبر بين رقمين.",
+  "problem": "Wrong meaning/grammar: 'أكبر رقمين' means 'the two largest numbers' rather than 'the larger of two numbers'."
+ },
+ {
+  "key": "lenum.currentwavetime",
+  "severity": "low",
+  "before": "العد التنازلي للموجة بالتكات.",
+  "after": "العد التنازلي للموجة بالنبضات.",
+  "problem": "Colloquial transliteration 'بالتكات' for 'ticks', inconsistent with 'بالنبضات' defined in lglobal.@tick and lglobal.@ipt."
+ },
+ {
+  "key": "lenum.wavespacing",
+  "severity": "low",
+  "before": "الوقت بين الموجات بالتكات.",
+  "after": "الوقت بين الموجات بالنبضات.",
+  "problem": "Colloquial transliteration 'بالتكات' for 'ticks', inconsistent with 'بالنبضات' defined in lglobal.@tick and lglobal.@ipt."
+ },
+ {
+  "key": "blockflag.label.shield",
+  "severity": "low",
+  "before": "درع واقي",
+  "after": "درع واق",
+  "problem": "Ungrammatical indefinite defective adjective: 'واقي' in indefinite nominative form must be 'واق'."
+ },
+ {
+  "key": "laccess.label.boosting",
+  "severity": "medium",
+  "before": "معزز",
+  "after": "يستخدم الدفع",
+  "problem": "Wrong meaning: 'معزز' means 'buffed/reinforced' instead of actively thruster-boosting ('تستخدم الدفع' in laccess.boosting)."
+ },
+ {
+  "key": "laccess.label.building",
+  "severity": "medium",
+  "before": "يبني",
+  "after": "المبنى قيد البناء",
+  "problem": "Wrong meaning: '@building' returns the building being constructed (noun), not a boolean verb 'يبني' ('is building')."
+ },
+ {
+  "key": "laccess.label.breaking",
+  "severity": "medium",
+  "before": "يهدم",
+  "after": "المبنى قيد التفكيك",
+  "problem": "Wrong meaning: '@breaking' returns the building being deconstructed (noun), not a boolean verb 'يهدم' ('is demolishing')."
+ },
+ {
+  "key": "laccess.label.payloadcount",
+  "severity": "low",
+  "before": "عدد الحمولة",
+  "after": "عدد الحمولات",
+  "problem": "Ungrammatical singular after 'عدد': should use plural 'عدد الحمولات' (cf. laccess.payloadcount)."
+ },
+ {
+  "key": "lunitcontrol.label.boost",
+  "severity": "medium",
+  "before": "تعزيز",
+  "after": "دفع",
+  "problem": "Mistranslated game term: 'تعزيز' means 'buffing/reinforcing' instead of thruster boost ('الدفع' in tooltip lenum.boost)."
+ },
+ {
+  "key": "tilelayer.label.block",
+  "severity": "high",
+  "before": "مبنى",
+  "after": "نوع المبنى",
+  "problem": "Identical translation 'مبنى' for both 'block' (block type) and 'building' (building instance) in the same getblock dropdown."
+ },
+ {
+  "key": "name.token.loops",
+  "severity": "medium",
+  "before": "الحلقات",
+  "after": "الأصوات المتكررة",
+  "problem": "Wrong meaning in audio categories context: 'الحلقات' means 'rings/episodes' rather than looping sounds."
+ }
+]

@@ -99,6 +99,32 @@ public class Fonts{
     }
 
     public static void loadExtraFonts(){
+        //Arabic letters are not in the main font; this font only contains Arabic glyphs, so it can always override.
+        Core.assets.load("font_ar", Font.class, new FreeTypeFontLoaderParameter("fonts/font_ar.woff", new FreeTypeFontParameter(){{
+            size = 18;
+            incremental = true;
+            shadowColor = Color.darkGray;
+            shadowOffsetY = 2;
+            characters = "\u0000 ";
+        }})).loaded = f -> Fonts.def.data.setOverride(f.data);
+
+        //borderless Arabic glyphs, drawn over the outlined ones so borders don't cut through joined letters
+        Core.assets.load("font_ar_fill", Font.class, new FreeTypeFontLoaderParameter("fonts/font_ar.woff", new FreeTypeFontParameter(){{
+            size = 18;
+            incremental = true;
+            characters = "\u0000 ";
+        }}));
+
+        Core.assets.load("font_ar_outline", Font.class, new FreeTypeFontLoaderParameter("fonts/font_ar.woff", new FreeTypeFontParameter(){{
+            size = 18;
+            incremental = true;
+            borderColor = Color.darkGray;
+            characters = "\u0000 ";
+        }})).loaded = f -> {
+            ((FreeTypeFontData)f.data).setFill(Core.assets.get("font_ar_fill", Font.class).data);
+            Fonts.outline.data.setOverride(f.data);
+        };
+
         //Japanese needs to override the default font with its own characters - see https://heistak.github.io/your-code-displays-japanese-wrong/
         if(Locale.getDefault().getLanguage().equals("ja")){
             Core.assets.load("font_jp", Font.class, new FreeTypeFontLoaderParameter("fonts/font_jp.woff", new FreeTypeFontParameter(){{

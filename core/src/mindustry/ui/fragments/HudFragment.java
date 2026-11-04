@@ -956,7 +956,8 @@ public class HudFragment{
                 if(fract < 0) return;
 
                 fract = Mathf.clamp(fract);
-                if(flip){
+                //mirrored RTL layout swaps the bars, so their shape must be flipped too
+                if(flip != Table.rtl){
                     x += width;
                     width = -width;
                 }
@@ -988,7 +989,7 @@ public class HudFragment{
 
                 Draw.reset();
 
-                if(flip){
+                if(flip != Table.rtl){
                     width = -width;
                     x -= width;
                 }
