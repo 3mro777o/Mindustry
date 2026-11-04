@@ -14,7 +14,6 @@ More screens in `screenshots/en` and `screenshots/ar`.
 ## What works
 - Arabic letter shaping, right-to-left text, mixed Arabic / English / numbers, line wrapping and color tags.
 - Mirrored UI when the language is Arabic.
-- Western digits (0-9) in Arabic mode.
 - Text layout does not allocate memory and does not use `java.text` (bidi is a small built-in implementation).
 
 ## Planned pull requests (to Arc, written by hand)
