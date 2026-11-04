@@ -27,7 +27,7 @@ Then the Mindustry side (font and settings) and a human-made Arabic translation.
 None of this changes anything for other languages.
 
 ## Known gaps
-- Not tested on Android or iOS.
+- Tested on desktop (Linux) and Android. Not tested on iOS.
 - Cursor position inside Arabic text in text fields is wrong.
 - Sliders and arrow icons are not mirrored.
 - Harakat (diacritics) are not shown.
