@@ -13,7 +13,7 @@ public class AllocEach{
         };
         Font font = new Font(data, new TextureRegion(), true){};
         data.markupEnabled = true; data.spaceXadvance = 10; data.down = -20;
-        String[] texts = {"Hello world", "[red]Play[] now", "مرحبا بالعالم 123", "ابدأ (Play) الآن", "[red]العب[] الآن و[blue]ل[]ا", "هذا نص طويل جدا يجب أن ينطوي على عدة أسطر هنا", "[accent]ابن: [][lightgray]1[]x\nحفار", "الطاقة: 45% (+12/ث) Mindustry v7", "ا"};
+        String[] texts = {"Hello world", "[red]Play[] now", "مرحبا بالعالم 123", "ابدأ (Play) الآن", "[red]العب[] الآن و[blue]ل[]ا", "هذا نص طويل جدا يجب أن ينطوي على عدة أسطر هنا", "[accent]ابن: [][lightgray]1[]x\nحفار", "الطاقة: 45% (+12/ث) Mindustry v7", "ا", "مُحَمَّدٌ يَبْنِي قَاعِدَةً. ابنِ الآن"};
         GlyphLayout l = new GlyphLayout();
         com.sun.management.ThreadMXBean mx = (com.sun.management.ThreadMXBean)java.lang.management.ManagementFactory.getThreadMXBean();
         long id = Thread.currentThread().getId();

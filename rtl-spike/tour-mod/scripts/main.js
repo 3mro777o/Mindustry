@@ -21,6 +21,20 @@ Events.run(Trigger.uiDrawEnd, () => {
     }catch(e){ note("shotfail " + name + " " + e); }
 });
 
+// keep the text cursor visible in screenshots (blinkTime is protected)
+function noBlink(f){
+    try{
+        let c = f.getClass();
+        while(c.getSimpleName() != "TextField") c = c.getSuperclass();
+        const fl = c.getDeclaredField("blinkTime");
+        fl.setAccessible(true);
+        fl.setFloat(f, 1000);
+        const lb = c.getDeclaredField("lastBlink"); lb.setAccessible(true); lb.setLong(f, Packages.arc.util.Time.nanos());
+        const on = c.getDeclaredField("cursorOn"); on.setAccessible(true); on.setBoolean(f, true);
+        note("cursor=" + f.getCursorPosition() + " text=" + f.getText());
+    }catch(e){ note("noBlink failed " + e); }
+}
+
 function hideAll(){
     try{
         const dialogs = Core.scene.root.getChildren().copy();
@@ -78,6 +92,20 @@ const steps = [
         f.setCursorPosition(f.getText().length);
         f.selectAll();
     }, 1.5],
+    ["25b_textfield_cursor", () => {
+        const d = new Packages.mindustry.ui.dialogs.BaseDialog("المؤشر");
+        const f = d.cont.field("مرحبا بالعالم", s => {}).width(420).get();
+        d.cont.row();
+        d.cont.field("هذا نص طويل جدا لا يتسع داخل الخانة الصغيرة ويجب أن يتمرر", s => {}).width(260);
+        d.cont.row();
+        d.cont.add("مُحَمَّدٌ يَبْنِي قَاعِدَةً. ابنِ الآن!").pad(10);
+        d.addCloseButton();
+        d.show();
+        Core.scene.setKeyboardFocus(f);
+        f.setCursorPosition(5);
+        f.clearSelection();
+        noBlink(f);
+    }, 1.5],
     ["26_objective_labels", () => {
         const d = new Packages.mindustry.ui.dialogs.BaseDialog("objectives");
         const texts = [
@@ -94,12 +122,15 @@ const steps = [
     ["32_place_duo", () => { control.input.block = Blocks.duo; }, 1.5],
     ["33_paused", () => { control.input.block = null; ui.paused.show(); }, 1.5],
     ["34_research_ingame", () => ui.research.show(), 2],
-    ["35_chat", () => { ui.chatfrag.toggle(); }, 1],
+    ["35_chat", () => { Vars.net.host(Vars.port); ui.chatfrag.toggle(); }, 1.5],
     ["35b_chat_messages", () => {
         ui.chatfrag.addMessage("[accent]لاعب[]: مرحبا بكم في السيرفر 123");
         ui.chatfrag.addMessage("[coral]Player[]: hello everyone");
         ui.chatfrag.addMessage("[accent]أحمد[]: لنبني ناقلات (conveyors) إلى النواة");
-    }, 1],
+        ui.chatfrag.addMessage("[coral]Sara[]: شكرًا، ابنِ الأبراج هنا");
+        const f = Core.scene.getKeyboardFocus();
+        if(f != null){ f.setText("أنا قادم الآن"); f.setCursorPosition(3); noBlink(f); }
+    }, 1.5],
     ["36_toast", () => { ui.chatfrag.toggle(); ui.hudfrag.showToast("@sector.capture"); ui.announce("@sector.curcapture"); }, 1],
     ["37_gameover", () => ui.restart.show(Team.crux), 2],
     ["40_game_erekir", () => { logic.reset(); control.playSector(SectorPresets.onset.sector); }, 8],

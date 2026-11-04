@@ -46,9 +46,11 @@ public class PocTest{
             boolean markup = r.nextBoolean();
             String exp = old.OldShaper.shape(s, 0, s.length(), markup).toString();
             ArabicShaper.shape(s, 0, s.length(), markup, out);
-            if(!exp.equals(out.toString())){ if(shapeFail++ < 8) System.out.println("  shape diff markup=" + markup + " [" + s + "] old=[" + exp + "] new=[" + out + "]"); }
+            StringBuilder noMarks = new StringBuilder();
+            for(int k = 0; k < out.length(); k++) if(!ArabicShaper.isMark(out.charAt(k))) noMarks.append(out.charAt(k));
+            if(!exp.equals(noMarks.toString())){ if(shapeFail++ < 8) System.out.println("  shape diff markup=" + markup + " [" + s + "] old=[" + exp + "] new=[" + out + "]"); }
         }
-        System.out.println("shaper mismatches vs prototype: " + shapeFail + " / 200000");
+        System.out.println("shaper mismatches vs prototype (ignoring kept marks): " + shapeFail + " / 200000");
 
         // 3. Allocation check on full layout
         FontData data = new FontData(){

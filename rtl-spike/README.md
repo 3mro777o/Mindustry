@@ -8,12 +8,15 @@
 |---|---|
 | ![](screenshots/en/30_game_serpulo.png) | ![](screenshots/ar/30_game_serpulo.png) |
 | ![](screenshots/en/03_settings.png) | ![](screenshots/ar/03_settings.png) |
+| ![](screenshots/en/35b_chat_messages.png) | ![](screenshots/ar/35b_chat_messages.png) |
 
 More screens in `screenshots/en` and `screenshots/ar`.
 
 ## What works
 - Arabic letter shaping, right-to-left text, mixed Arabic / English / numbers, line wrapping and color tags.
 - Mirrored UI when the language is Arabic.
+- Harakat (diacritics), drawn over or under their letter.
+- Text fields (including chat): correct cursor position, selection, scrolling and arrow keys in Arabic text.
 - Text layout does not allocate memory and does not use `java.text` (bidi is a small built-in implementation).
 
 ## Planned pull requests (to Arc, written by hand)
@@ -27,8 +30,8 @@ None of this changes anything for other languages.
 
 ## Known gaps
 - Tested on desktop (Linux) and Android. Not tested on iOS.
-- Cursor position inside Arabic text in text fields is wrong.
+- Multi-line text areas still use the left-to-right cursor logic.
 - Sliders and arrow icons are not mirrored.
-- Harakat (diacritics) are not shown.
+- Harakat are positioned with a simple rule (centered on the letter), not with the font's positioning data.
 
 The engine changes are on the `arabic-rtl-spike` branch of [3mro777o/Arc](https://github.com/3mro777o/Arc/tree/arabic-rtl-spike).
